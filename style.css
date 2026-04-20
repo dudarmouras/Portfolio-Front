@@ -1,0 +1,524 @@
+/* font-family: "Source Code Pro", monospace; */
+
+/* Estilo geral */
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Source Code Pro", monospace;
+}
+
+body{
+    background-color: #d2b1fd;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+/* Estilo do cabeçalho */
+header{
+    padding: 20px 4%;
+    background-color: #966afc;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: #e2a6e7; 
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+    font-weight: 600;
+}
+
+header a:hover{
+    color: #FFFFFF;
+    transform: scale(1.05);
+}
+
+header img{
+    width: 100px;
+    height: 100px;
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+header .btn-contato button{
+    padding: 8px 25px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: #fa9aed;
+    border: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+header .btn-contato button:hover{
+    background-color: #FFFFFF;
+    color: #f86be5;
+    transform: translateY(-5px);
+}
+
+/* Estilo do topo do site */
+section.topo-do-site{
+    padding: 60px 4%;
+    position: relative;
+    z-index: 5;
+    background-color: #dfc5f7;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1{
+    color: #5b39a8;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span{
+    color: #c41cf7 ;
+    font-size: 38px;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: black;
+    margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+    width: 250px;
+    border-radius: 20%;
+}
+
+/* Container da lista */
+.lista-topicos {
+    list-style: none; /* Remove a bolinha padrão */
+    margin: 25px 0;
+    padding: 0;
+}
+
+/* Estilo de cada item da lista */
+.lista-topicos li {
+    position: relative;
+    padding-left: 35px; /* Espaço para o ícone */
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.lista-topicos li::before {
+    content: "✦"; 
+    position: absolute;
+    left: 0;
+    color: #c41cf7; 
+    font-size: 20px;
+    font-weight: bold;
+    top: -2px;
+}
+
+.lista-topicos li span {
+    color: #5b39a8; 
+    font-weight: 700;
+    display: inline-block;
+    margin-right: 5px;
+}
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 20px;
+    }
+}
+
+/* Estilo do Footer */
+footer {
+    padding: 30px 4%;
+    background-color: #966afc;
+    border-top: 2px solid #fa9aed; 
+}
+
+footer .interface {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+
+footer img{
+    width: 100px;
+}
+
+.linha-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.midia-social a {
+    color: #FFFFFF;
+    font-size: 28px;
+    margin-left: 20px;
+    transition: .3s;
+    display: inline-block;
+}
+
+/* Efeitos especiais */
+.midia-social a:hover {
+    color: #fa9aed;
+    transform: translateY(-5px);
+}
+
+/* Divisória */
+.contato-footer {
+    text-align: center;
+    border-top: 1px solid #e6c7e1; 
+    padding-top: 20px;
+}
+
+.contato-footer p {
+    color: #FFFFFF;
+}
+
+.contato-footer p i {
+    color: #e6c7e1;
+    margin-right: 10px;
+}
+
+.contato-footer a {
+    color: #e6c7e1;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.contato-footer a:hover {
+    text-decoration: wavy;
+}
+
+/* Formulário */
+section.formulario {
+    padding: 80px 4%;
+    background-color: #f1cbec; 
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.titulo {
+    color: #5b39a8;
+    font-size: 38px;
+    text-align: center;
+    font-weight: bold;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 1px solid #fa9aed;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #252525;
+    font-size: 18px;
+    transition: .2s;
+}
+
+form input:focus, form textarea:focus {
+    background-color: #FFFFFF;
+    border-color: #fa9aed;
+    box-shadow: 0 0 15px rgba(197, 59, 99, 0.3);
+}
+
+form .btn-enviar {
+    margin-top: 10px;
+    text-align: center;
+}
+ 
+form .btn-enviar input[type="submit"] {
+    width: 150px;
+    padding: 10px 15px;
+    background-color: #936fe7;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .2s;
+    box-shadow: 0px 4px 15px rgba(197, 59, 99, 0.3);
+}
+
+form .btn-enviar input[type="submit"]:hover {
+    background-color: #fa9aed;
+    border: 1px solid #fa9aed;
+    transform: scale(1.05); 
+    box-shadow: 0px 6px 20px rgba(158, 59, 145, 0.4);
+}
+
+/* Bolha +  form*/
+.flex-contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px; 
+    margin-top: 50px;
+}
+
+.img-bolha img {
+    max-width: 320px; 
+    animation: flutuar 3s ease-in-out infinite;
+    margin-top: -70px;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px); 
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+form {
+    max-width: 500px;
+    margin: 0; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .flex-contato {
+        flex-direction: column;
+    }
+}
+
+/* Seção de Projetos */
+section.projetos {
+    padding: 100px 4%;
+    background-color: #d2b1fd;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.carrossel-container {
+    margin-top: 50px;
+    overflow-x: auto;
+    padding: 40px 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #fa9aed #f4daec;
+}
+
+.carrossel-container::-webkit-scrollbar {
+     height: 8px; 
+    }
+
+.carrossel-container::-webkit-scrollbar-thumb { 
+    background: #9913c2;
+    border-radius: 10px; 
+}
+
+.flex-projetos {
+    display: flex;
+    gap: 30px;
+    scroll-snap-type: x mandatory;
+}
+
+.card-projeto {
+    min-width: 350px;
+    min-height: 380px;
+    background: linear-gradient(135deg, #f4daec 0%, #deb0ec 100%); 
+    border-radius: 20px;
+    border: 2px solid #c181d4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+    scroll-snap-align: start;
+    box-shadow: 0 10px 20px rgba(153, 19, 194, 0.1);
+    animation: flutuar 4s ease-in-out infinite;
+    transition: transform 0.3s;
+}
+
+.card-projeto:nth-child(even) {
+    animation-delay: 1s;
+    background: linear-gradient(135deg, #fff 0%, #f4daec 100%);
+}
+
+.card-projeto:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(197, 59, 99, 0.3);
+}
+
+.conteudo-projeto h3 {
+    font-size: 26px;
+    color: #9913c2; 
+    margin-bottom: 15px;
+}
+
+.conteudo-projeto p {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* Tags */
+.tags {
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.tags span {
+    background-color: #C53B63;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Botões */
+.botoes-projeto button {
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Link do deploy */
+.btn-visitar {
+    background-color: #9913c2; 
+    color: #fff;
+}
+
+/* Link no Github */
+.btn-codigo {
+    background-color: #9913c2;
+    color: #fff;
+}
+
+.botoes-projeto button:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+/* Responsividade */
+@media screen and (max-width: 1024px) {
+    .card-projeto { min-width: calc(50% - 15px); }
+}
+
+@media screen and (max-width: 768px) {
+    .card-projeto { min-width: 100%; }
+}
+
+/* Marquee das tecnologias */
+section.tecnologias {
+    padding: 60px 4%;
+    background-color: #f1cbec;
+    position: relative;
+    z-index: 4; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.header-tecnologias {
+    max-width: 1280px;
+    margin: 0 auto 40px;
+}
+
+.titulo-tecnologias {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+
+    background: linear-gradient(
+        to right,
+        #C53B63,
+        #9913c2
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.scroll-tecnologias {
+    width: 100%;
+    overflow: hidden;
+    padding: 25px 0;
+
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+
+    border-image: linear-gradient(
+        to right,
+        #c53b629f,
+        #9913c295
+    ) 1;
+}
+
+.tecnologias-img {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    width: max-content;
+    will-change: transform;
+}
+
+/* Cards das tecnologias */
+.tecnologias-img i {
+    font-size: 45px;
+    flex-shrink: 0;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.tecnologias-img i:hover {
+    opacity: 1;
+    transform: translateY(-6px) scale(1.1);
+    cursor: pointer;
+}
